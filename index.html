@@ -1,0 +1,15 @@
+<html ng-app="firstModule">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="clockWork.js"></script>
+    </head>
+    <body>
+        <div ng-controller="mainMethod as main">
+            <h1>Hello World!</h1>
+            <h2 ng-if="main.hourOfDay < 12">Good Morning!</h2>
+            <h2 ng-if="main.hourOfDay >= 12 && main.hourOfDay < 18">Good Afternoon!</h2>
+            <h2 ng-if="main.hourOfDay >= 18">Good Evening!</h2>
+            <p>The time of the day is <span ng-bind="main.timeOfDay"></span></p>
+        </div>
+    </body>
+</html>
